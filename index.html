@@ -760,7 +760,12 @@
     }
 
     function executeSaveMasterEnterpriseDatabaseToLocalStorageMemoryBankDatabaseSystemLogic() { 
-        localStorage.setItem(SYSTEM_MASTER_DATABASE_IDENTIFICATION_CONNECTION_SYNCHRONIZATION_KEY_LOCAL_STORAGE_BRIDGE_STRING, JSON.stringify(globalCityKeyEnterpriseMasterDatabaseInformationSystemObjectTrackerArchitectureEngineFramework)); 
+        try {
+            localStorage.setItem(SYSTEM_MASTER_DATABASE_IDENTIFICATION_CONNECTION_SYNCHRONIZATION_KEY_LOCAL_STORAGE_BRIDGE_STRING, JSON.stringify(globalCityKeyEnterpriseMasterDatabaseInformationSystemObjectTrackerArchitectureEngineFramework)); 
+        } catch (error) {
+            alert("🚨 GAGAL MENYIMPAN: Ukuran foto produk terlalu besar! Memori browser penuh. Tolong perkecil/kompres foto sebelum di-upload ya.");
+            console.error("LocalStorage Limit Exceeded:", error);
+        }
     }
     
     function executeWriteAccountingAuditLedgerRecordEntryLogBookTransactionSystemArchitecture(transactionDescriptionTextStringLogDataEntryDescLog, transactionDebitAmountValueNumDataCurrencyValueAmount, transactionCreditAmountValueNumDataCurrencyValueAmount) { 
@@ -1208,7 +1213,7 @@
             if(statePreviousStatusStringValArchiveHistoryLogRecordStateVar !== 'Batal' && newlySelectedStatusStringValueTextSelectionStatusDataLogRecordVal === 'Batal') { 
                 targetedOrderReferenceObjectNodeRecordDatabaseEntryRowFieldDataLog.it.forEach(cartItemObjNodeElementListArrayGroupItemMatch => { 
                     const masterCatalogProdRefDataPointIndexMappingSearchTargetMatch = globalCityKeyEnterpriseMasterDatabaseInformationSystemObjectTrackerArchitectureEngineFramework.products.find(xFindIdentifierCheckIndexLogicMapItemSearchRule => xFindIdentifierCheckIndexLogicMapItemSearchRule.id === cartItemObjNodeElementListArrayGroupItemMatch.id); 
-                    if(masterCatalogProdRefDataPointIndexMappingSearchTargetMatch) masterCatalogProdRefDataPointIndexMappingSearchTargetMatch.stok += cartItemObjNodeElementListArrayGroupItemMatch.qty; 
+                    if(masterCatalogProdRefDataPointIndexMappingSearchTargetMatch) masterCatalogProdRefDataPointIndexMappingSearchTargetMatch.st += cartItemObjNodeElementListArrayGroupItemMatch.qty; 
                 }); 
                 executeTriggerAdministratorSystemToastNotificationPopUpAlertProtocolCommand("Pesanan Batal: Stok Dikembalikan!"); 
             } 
@@ -1216,7 +1221,7 @@
             if(statePreviousStatusStringValArchiveHistoryLogRecordStateVar === 'Batal' && newlySelectedStatusStringValueTextSelectionStatusDataLogRecordVal !== 'Batal') { 
                 targetedOrderReferenceObjectNodeRecordDatabaseEntryRowFieldDataLog.it.forEach(cartItemObjNodeElementListArrayGroupItemMatch => { 
                     const masterCatalogProdRefDataPointIndexMappingSearchTargetMatch = globalCityKeyEnterpriseMasterDatabaseInformationSystemObjectTrackerArchitectureEngineFramework.products.find(xFindIdentifierCheckIndexLogicMapItemSearchRule => xFindIdentifierCheckIndexLogicMapItemSearchRule.id === cartItemObjNodeElementListArrayGroupItemMatch.id); 
-                    if(masterCatalogProdRefDataPointIndexMappingSearchTargetMatch) masterCatalogProdRefDataPointIndexMappingSearchTargetMatch.stok -= cartItemObjNodeElementListArrayGroupItemMatch.qty; 
+                    if(masterCatalogProdRefDataPointIndexMappingSearchTargetMatch) masterCatalogProdRefDataPointIndexMappingSearchTargetMatch.st -= cartItemObjNodeElementListArrayGroupItemMatch.qty; 
                 }); 
                 executeTriggerAdministratorSystemToastNotificationPopUpAlertProtocolCommand("Dipulihkan: Stok Dipotong."); 
             } 
