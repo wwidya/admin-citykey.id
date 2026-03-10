@@ -13,12 +13,6 @@
     <style>
         /* ====================================================================================================
            CITYKEY ADMINISTRATIVE DESIGN SYSTEM - V3500.0 (TITAN SCALE & ABSOLUTE ANTI-FREEZE ARCHITECTURE)
-           ====================================================================================================
-           PEMBERITAHUAN SISTEM KEAMANAN & RENDERING INFRASTRUKTUR CSS:
-           1. Teks UI dipertahankan pada skala normal (12px-14px) agar User Experience (UX) bersih.
-           2. Kelas CSS dan ID diperpanjang menggunakan metodologi Hyper-Verbose Naming Convention.
-           3. Modal menggunakan display:none murni. Tidak ada bug klik.
-           4. Fungsi simpan diaktifkan sepenuhnya.
            ==================================================================================================== */
         
         :root { 
@@ -33,7 +27,6 @@
             --citykey-administrative-global-font-family-system-architecture: 'Plus Jakarta Sans', sans-serif;
         }
 
-        /* DYNAMIC THEME ENGINE CONFIGURATIONS - DARK MODE & EYE CARE MODE */
         .system-application-theme-dark-mode-enabled-configuration-active { 
             --citykey-administrative-background-base-color-hex-code-system: #0F172A; 
             --citykey-administrative-surface-container-color-hex-code-system: #1E293B; 
@@ -55,9 +48,6 @@
         * { font-family: var(--citykey-administrative-global-font-family-system-architecture) !important; box-sizing: border-box; }
         body { background-color: var(--citykey-administrative-background-base-color-hex-code-system); color: var(--citykey-administrative-text-main-color-hex-code-system); margin: 0; padding: 0; overflow: hidden; transition: 0.3s ease; }
 
-        /* ====================================================================================================
-           LOGIN SCREEN KAKU & SOLID (MENCEGAH FREEZE BROWSER 100%)
-           ==================================================================================================== */
         .administrative-login-gate-solid-wrapper-screen-container-architecture {
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             background-color: #E2EFF7; z-index: 999999; display: flex; justify-content: center; align-items: center;
@@ -68,9 +58,6 @@
             box-shadow: 0 15px 35px rgba(162, 195, 216, 0.2); border-top: 8px solid var(--citykey-administrative-primary-color-hex-code-system);
         }
 
-        /* ====================================================================================================
-           COMPACT UI COMPONENTS & SIDEBAR (MUAT 1 LAYAR TANPA SCROLL)
-           ==================================================================================================== */
         .administrative-dashboard-card-module-component-block { 
             background-color: var(--citykey-administrative-surface-container-color-hex-code-system); 
             border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); 
@@ -97,7 +84,6 @@
         }
         .administrative-global-input-field-interactive-component-data:focus { border-color: var(--citykey-administrative-primary-color-hex-code-system); }
 
-        /* KUNCI MENU MUAT 1 LAYAR: PADDING COMPACT & FONT NORMAL */
         .administrative-sidebar-navigation-link-item-menu-route { 
             padding: 12px 16px; border-radius: 12px; font-weight: 700; color: var(--citykey-administrative-text-muted-color-hex-code-system); 
             cursor: pointer; display: flex; align-items: center; gap: 12px; margin-bottom: 4px; font-size: 13px; 
@@ -108,7 +94,6 @@
         .administrative-theme-color-selector-ring-button-component { border: 2px solid transparent; border-radius: 50%; padding: 2px; cursor: pointer; width: 36px; height: 36px; display: inline-block; margin-right: 6px; margin-bottom: 6px; }
         .administrative-theme-color-selector-ring-button-component.is-active-selection-state-color { border-color: var(--citykey-administrative-text-main-color-hex-code-system); transform: scale(1.1); }
 
-        /* MURNI MODAL DISPLAY NONE (SANGAT AMAN DARI BUG KLIK) */
         .administrative-modal-overlay-background-protection-layer-display-none { 
             position: fixed; inset: 0; background-color: rgba(0,0,0,0.6); 
             z-index: 150000; align-items: center; justify-content: center; padding: 20px; display: none; 
@@ -118,7 +103,6 @@
             border-radius: 24px; padding: 30px; max-height: 90vh; overflow-y: auto; border: 1px solid var(--citykey-administrative-border-outline-color-rgba-code-system); 
         }
 
-        /* TOAST NOTIFICATION */
         .administrative-system-toast-notification-popup-alert-message { 
             position: fixed; top: 20px; left: 50%; transform: translateX(-50%); 
             background-color: var(--citykey-administrative-text-main-color-hex-code-system); color: var(--citykey-administrative-background-base-color-hex-code-system); padding: 12px 24px; border-radius: 50px; 
@@ -129,19 +113,19 @@
         @media print { body * { visibility: hidden; } #administrative-print-thermal-receipt-area-target-render, #administrative-print-thermal-receipt-area-target-render * { visibility: visible; } #administrative-print-thermal-receipt-area-target-render { position: absolute; left: 0; top: 0; width: 100%; background: #FFF; color: #000; margin: 0; padding: 0; } .no-print-zone-exclusion-class { display: none !important; } }
     </style>
 </head>
-<body class="flex w-full h-screen relative">
+<body class="flex w-full h-screen relative overflow-hidden text-[13px] md:text-sm">
 
 <div id="administrative-global-system-toast-ui-component-alert" class="administrative-system-toast-notification-popup-alert-message no-print-zone-exclusion-class">
     <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 
     <span id="administrative-global-system-toast-message-text-content-display">Memuat Komponen Infrastruktur Server...</span>
 </div>
 
-<div id="administrative-system-login-authentication-gate-screen-layer" class="administrative-login-gate-solid-wrapper-screen-container-architecture no-print-zone-exclusion-class">
-    <div class="administrative-login-card-solid-container-box-module-ui">
+<div id="administrative-system-login-authentication-gate-screen-layer" class="administrative-login-gate-solid-wrapper-screen-container-architecture no-print-zone-exclusion-class px-4">
+    <div class="administrative-login-card-solid-container-box-module-ui w-full max-w-md">
         <div class="w-16 h-16 rounded-[20px] mx-auto flex items-center justify-center mb-4" style="background-color: var(--citykey-administrative-primary-color-hex-code-system); color: white;">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path></svg>
         </div>
-        <h2 class="text-3xl font-black mb-1 text-center" style="color: var(--citykey-administrative-text-main-color-hex-code-system);">CityKey Admin</h2>
+        <h2 class="text-2xl md:text-3xl font-black mb-1 text-center" style="color: var(--citykey-administrative-text-main-color-hex-code-system);">CityKey Admin</h2>
         <p class="text-[10px] font-bold mb-8 text-center tracking-widest uppercase" style="color: var(--citykey-administrative-text-muted-color-hex-code-system);">Sistem Manajemen Pusat</p>
         
         <input type="password" id="administrative-input-security-login-pin-password-code-field" class="administrative-global-input-field-interactive-component-data text-center text-lg tracking-[0.3em] font-mono mb-5" placeholder="••••••••" onkeypress="if(event.key==='Enter') executeMasterAdministratorLoginAuthenticationProcessSequenceLogicAlgorithmEngine()">
@@ -150,8 +134,24 @@
     </div>
 </div>
 
-<aside class="w-[260px] border-r flex flex-col h-full z-10 p-5 shrink-0 no-print-zone-exclusion-class" style="background-color: var(--citykey-administrative-surface-container-color-hex-code-system); border-color: var(--citykey-administrative-border-outline-color-rgba-code-system);">
-    <div class="p-3.5 rounded-2xl flex items-center gap-3 mb-6 border" style="background-color: var(--citykey-administrative-background-base-color-hex-code-system); border-color: var(--citykey-administrative-border-outline-color-rgba-code-system);">
+<div class="md:hidden flex items-center justify-between p-4 border-b shadow-sm z-40 w-full absolute top-0 left-0 h-[70px] no-print-zone-exclusion-class" style="background-color: var(--citykey-administrative-surface-container-color-hex-code-system); border-color: var(--citykey-administrative-border-outline-color-rgba-code-system);">
+    <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl border shadow-sm bg-white" style="border-color: var(--citykey-administrative-border-outline-color-rgba-code-system);">🏛️</div>
+        <h1 class="text-lg font-black tracking-tight" style="color: var(--citykey-administrative-primary-color-hex-code-system);">CityKey</h1>
+    </div>
+    <button onclick="document.getElementById('mobile-sidebar').classList.toggle('-translate-x-full'); document.getElementById('sidebar-overlay').classList.toggle('hidden');" class="p-2 rounded-lg" style="background-color: var(--citykey-administrative-background-base-color-hex-code-system); color: var(--citykey-administrative-text-main-color-hex-code-system);">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </button>
+</div>
+
+<div id="sidebar-overlay" class="fixed inset-0 bg-black/60 z-40 hidden md:hidden no-print-zone-exclusion-class backdrop-blur-sm transition-opacity" onclick="document.getElementById('mobile-sidebar').classList.add('-translate-x-full'); document.getElementById('sidebar-overlay').classList.add('hidden');"></div>
+
+<aside id="mobile-sidebar" class="fixed md:relative top-0 left-0 w-[260px] border-r flex flex-col h-full z-50 p-5 shrink-0 transition-transform duration-300 transform -translate-x-full md:translate-x-0 no-print-zone-exclusion-class shadow-2xl md:shadow-none" style="background-color: var(--citykey-administrative-surface-container-color-hex-code-system); border-color: var(--citykey-administrative-border-outline-color-rgba-code-system);">
+    <button class="md:hidden absolute top-4 right-4 p-2 text-gray-400 hover:text-red-500" onclick="document.getElementById('mobile-sidebar').classList.add('-translate-x-full'); document.getElementById('sidebar-overlay').classList.add('hidden');">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+
+    <div class="p-3.5 rounded-2xl flex items-center gap-3 mb-6 mt-8 md:mt-0 border" style="background-color: var(--citykey-administrative-background-base-color-hex-code-system); border-color: var(--citykey-administrative-border-outline-color-rgba-code-system);">
         <img id="administrative-sidebar-display-owner-avatar-image-render-ui" src="" class="w-10 h-10 rounded-xl object-cover p-0.5 border" style="border-color: var(--citykey-administrative-primary-color-hex-code-system);">
         <div class="flex-1 overflow-hidden">
             <h2 class="font-bold text-sm truncate" style="color: var(--citykey-administrative-text-main-color-hex-code-system);" id="administrative-sidebar-display-owner-name-identity-text-ui">Owner</h2>
@@ -160,17 +160,17 @@
     </div>
 
     <nav class="flex-1 overflow-y-auto pr-1 hide-css-native-scrollbars-utilities">
-        <div class="administrative-sidebar-navigation-link-item-menu-route is-active-route-path-selected" onclick="executeSwitchAdministrativeMainWorkspaceContentRouteSystemArchitectureDesign('dashboard', this)"><span>📊</span> Laporan Kas & Laba</div>
-        <div class="administrative-sidebar-navigation-link-item-menu-route" onclick="executeSwitchAdministrativeMainWorkspaceContentRouteSystemArchitectureDesign('catalog', this)"><span>📦</span> Gudang & Produk</div>
-        <div class="administrative-sidebar-navigation-link-item-menu-route" onclick="executeSwitchAdministrativeMainWorkspaceContentRouteSystemArchitectureDesign('orders', this)">
+        <div class="administrative-sidebar-navigation-link-item-menu-route is-active-route-path-selected" onclick="executeSwitchAdministrativeMainWorkspaceContentRouteSystemArchitectureDesign('dashboard', this); if(window.innerWidth < 768) { document.getElementById('mobile-sidebar').classList.add('-translate-x-full'); document.getElementById('sidebar-overlay').classList.add('hidden'); }"><span>📊</span> Laporan Kas & Laba</div>
+        <div class="administrative-sidebar-navigation-link-item-menu-route" onclick="executeSwitchAdministrativeMainWorkspaceContentRouteSystemArchitectureDesign('catalog', this); if(window.innerWidth < 768) { document.getElementById('mobile-sidebar').classList.add('-translate-x-full'); document.getElementById('sidebar-overlay').classList.add('hidden'); }"><span>📦</span> Gudang & Produk</div>
+        <div class="administrative-sidebar-navigation-link-item-menu-route" onclick="executeSwitchAdministrativeMainWorkspaceContentRouteSystemArchitectureDesign('orders', this); if(window.innerWidth < 768) { document.getElementById('mobile-sidebar').classList.add('-translate-x-full'); document.getElementById('sidebar-overlay').classList.add('hidden'); }">
             <span>📑</span> Pusat Ekspedisi
             <span id="administrative-sidebar-badge-unverified-orders-notification-indicator-alert" class="bg-red-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full ml-auto hidden animate-pulse">0</span>
         </div>
-        <div class="administrative-sidebar-navigation-link-item-menu-route" onclick="executeSwitchAdministrativeMainWorkspaceContentRouteSystemArchitectureDesign('vouchers', this)"><span>🎟️</span> Kupon Promo Diskon</div>
-        <div class="administrative-sidebar-navigation-link-item-menu-route" onclick="executeSwitchAdministrativeMainWorkspaceContentRouteSystemArchitectureDesign('ledger', this)"><span>📒</span> Jurnal Akuntansi Buku</div>
-        <div class="administrative-sidebar-navigation-link-item-menu-route" onclick="executeSwitchAdministrativeMainWorkspaceContentRouteSystemArchitectureDesign('users', this)"><span>👥</span> Database Member CRM</div>
-        <div class="administrative-sidebar-navigation-link-item-menu-route" onclick="executeSwitchAdministrativeMainWorkspaceContentRouteSystemArchitectureDesign('logs', this)"><span>🛡️</span> Log Akses Keamanan</div>
-        <div class="administrative-sidebar-navigation-link-item-menu-route" onclick="executeSwitchAdministrativeMainWorkspaceContentRouteSystemArchitectureDesign('settings', this)"><span>⚙️</span> Konfigurasi Sistem Toko</div>
+        <div class="administrative-sidebar-navigation-link-item-menu-route" onclick="executeSwitchAdministrativeMainWorkspaceContentRouteSystemArchitectureDesign('vouchers', this); if(window.innerWidth < 768) { document.getElementById('mobile-sidebar').classList.add('-translate-x-full'); document.getElementById('sidebar-overlay').classList.add('hidden'); }"><span>🎟️</span> Kupon Promo Diskon</div>
+        <div class="administrative-sidebar-navigation-link-item-menu-route" onclick="executeSwitchAdministrativeMainWorkspaceContentRouteSystemArchitectureDesign('ledger', this); if(window.innerWidth < 768) { document.getElementById('mobile-sidebar').classList.add('-translate-x-full'); document.getElementById('sidebar-overlay').classList.add('hidden'); }"><span>📒</span> Jurnal Akuntansi Buku</div>
+        <div class="administrative-sidebar-navigation-link-item-menu-route" onclick="executeSwitchAdministrativeMainWorkspaceContentRouteSystemArchitectureDesign('users', this); if(window.innerWidth < 768) { document.getElementById('mobile-sidebar').classList.add('-translate-x-full'); document.getElementById('sidebar-overlay').classList.add('hidden'); }"><span>👥</span> Database Member CRM</div>
+        <div class="administrative-sidebar-navigation-link-item-menu-route" onclick="executeSwitchAdministrativeMainWorkspaceContentRouteSystemArchitectureDesign('logs', this); if(window.innerWidth < 768) { document.getElementById('mobile-sidebar').classList.add('-translate-x-full'); document.getElementById('sidebar-overlay').classList.add('hidden'); }"><span>🛡️</span> Log Akses Keamanan</div>
+        <div class="administrative-sidebar-navigation-link-item-menu-route" onclick="executeSwitchAdministrativeMainWorkspaceContentRouteSystemArchitectureDesign('settings', this); if(window.innerWidth < 768) { document.getElementById('mobile-sidebar').classList.add('-translate-x-full'); document.getElementById('sidebar-overlay').classList.add('hidden'); }"><span>⚙️</span> Konfigurasi Sistem Toko</div>
     </nav>
 
     <button onclick="executeSystemInterfaceHardwareLockdownProtocolSecurityMechanism()" class="w-full mt-4 bg-red-50 text-red-600 font-bold py-3 rounded-xl transition hover:bg-red-600 hover:text-white flex justify-center items-center gap-2 text-xs border border-red-100">
@@ -178,9 +178,9 @@
     </button>
 </aside>
 
-<main class="flex-1 h-full overflow-y-auto p-8 relative no-print-zone-exclusion-class hide-css-native-scrollbars-utilities">
+<main class="flex-1 h-full overflow-y-auto p-4 md:p-8 pt-[90px] md:pt-8 relative no-print-zone-exclusion-class hide-css-native-scrollbars-utilities w-full">
 
-    <header class="flex justify-between items-center mb-8 administrative-dashboard-card-module-component-block p-5 border-t-4" style="border-top-color: var(--citykey-administrative-primary-color-hex-code-system);">
+    <header class="flex-col md:flex-row justify-between items-start md:items-center mb-8 administrative-dashboard-card-module-component-block p-5 border-t-4 hidden md:flex" style="border-top-color: var(--citykey-administrative-primary-color-hex-code-system);">
         <div class="flex items-center gap-4">
             <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl border bg-white shadow-sm" style="border-color: var(--citykey-administrative-border-outline-color-rgba-code-system);">🏛️</div>
             <div>
@@ -195,62 +195,62 @@
     </header>
 
     <section id="administrative-workspace-route-view-dashboard-panel-container-layout" class="administrative-content-viewport-section-view-route">
-        <div class="flex flex-col md:flex-row justify-between md:items-end mb-5 gap-4">
+        <div class="flex flex-col xl:flex-row justify-between xl:items-end mb-5 gap-4">
             <div>
-                <h2 class="text-2xl font-black mb-1" style="color: var(--citykey-administrative-text-main-color-hex-code-system);">Buku Kas Finansial 📉</h2>
+                <h2 class="text-xl md:text-2xl font-black mb-1" style="color: var(--citykey-administrative-text-main-color-hex-code-system);">Buku Kas Finansial 📉</h2>
                 <p class="text-xs font-medium" style="color: var(--citykey-administrative-text-muted-color-hex-code-system);">Rekap pendapatan bersih dari pesanan Selesai.</p>
             </div>
             
-            <div class="flex flex-wrap items-end gap-3 p-4 rounded-2xl border shadow-sm" style="background-color: var(--citykey-administrative-surface-container-color-hex-code-system); border-color: var(--citykey-administrative-border-outline-color-rgba-code-system);">
-                <div>
+            <div class="flex flex-wrap items-end gap-3 p-4 rounded-2xl border shadow-sm w-full xl:w-auto" style="background-color: var(--citykey-administrative-surface-container-color-hex-code-system); border-color: var(--citykey-administrative-border-outline-color-rgba-code-system);">
+                <div class="w-full sm:w-auto">
                     <label class="text-[10px] font-black uppercase block mb-1 text-gray-500">Mulai Tgl</label>
-                    <input type="date" id="administrative-filter-input-financial-date-start-dropdown-select-box" class="administrative-global-input-field-interactive-component-data !py-2 !px-3 text-xs cursor-pointer">
+                    <input type="date" id="administrative-filter-input-financial-date-start-dropdown-select-box" class="administrative-global-input-field-interactive-component-data !py-2 !px-3 text-xs cursor-pointer w-full sm:w-auto">
                 </div>
-                <div>
+                <div class="w-full sm:w-auto">
                     <label class="text-[10px] font-black uppercase block mb-1 text-gray-500">Sampai Tgl</label>
-                    <input type="date" id="administrative-filter-input-financial-date-end-dropdown-select-box" class="administrative-global-input-field-interactive-component-data !py-2 !px-3 text-xs cursor-pointer">
+                    <input type="date" id="administrative-filter-input-financial-date-end-dropdown-select-box" class="administrative-global-input-field-interactive-component-data !py-2 !px-3 text-xs cursor-pointer w-full sm:w-auto">
                 </div>
-                <div class="flex gap-2">
-                    <button onclick="executeApplyDateFilterShortcutConfigurationParameterLogicAlgorithm('today')" class="administrative-global-input-field-interactive-component-data !w-auto !py-2 !px-4 !text-xs cursor-pointer font-bold">Hari Ini</button>
-                    <button onclick="executeApplyDateFilterShortcutConfigurationParameterLogicAlgorithm('month')" class="administrative-global-input-field-interactive-component-data !w-auto !py-2 !px-4 !text-xs cursor-pointer font-bold">Bulan Ini</button>
-                    <button onclick="executeApplyDateFilterShortcutConfigurationParameterLogicAlgorithm('year')" class="administrative-global-input-field-interactive-component-data !w-auto !py-2 !px-4 !text-xs cursor-pointer font-bold">Tahun Ini</button>
-                    <button onclick="executeApplyDateFilterShortcutConfigurationParameterLogicAlgorithm('all')" class="administrative-global-action-button-primary-interactive-element !py-2 !px-4 !text-xs">Semua</button>
+                <div class="flex flex-wrap gap-2 w-full sm:w-auto">
+                    <button onclick="executeApplyDateFilterShortcutConfigurationParameterLogicAlgorithm('today')" class="administrative-global-input-field-interactive-component-data flex-1 sm:flex-none !w-auto !py-2 !px-4 !text-[10px] cursor-pointer font-bold">Hari Ini</button>
+                    <button onclick="executeApplyDateFilterShortcutConfigurationParameterLogicAlgorithm('month')" class="administrative-global-input-field-interactive-component-data flex-1 sm:flex-none !w-auto !py-2 !px-4 !text-[10px] cursor-pointer font-bold">Bulan Ini</button>
+                    <button onclick="executeApplyDateFilterShortcutConfigurationParameterLogicAlgorithm('year')" class="administrative-global-input-field-interactive-component-data flex-1 sm:flex-none !w-auto !py-2 !px-4 !text-[10px] cursor-pointer font-bold">Tahun Ini</button>
+                    <button onclick="executeApplyDateFilterShortcutConfigurationParameterLogicAlgorithm('all')" class="administrative-global-action-button-primary-interactive-element flex-1 sm:flex-none !py-2 !px-4 !text-[10px]">Semua</button>
                 </div>
-                <div class="w-px h-8 mx-1 hidden md:block bg-gray-200"></div>
-                <button onclick="executeDownloadFinancialAuditReportAsCSVFormatFileProcessorArchitecture()" class="administrative-global-action-button-primary-interactive-element !py-2 !px-5 text-xs bg-gray-800 hover:bg-black">Unduh CSV</button>
+                <div class="w-full h-px xl:w-px xl:h-8 mx-0 xl:mx-1 bg-gray-200"></div>
+                <button onclick="executeDownloadFinancialAuditReportAsCSVFormatFileProcessorArchitecture()" class="administrative-global-action-button-primary-interactive-element w-full sm:w-auto !py-2 !px-5 text-xs bg-gray-800 hover:bg-black">Unduh CSV</button>
             </div>
         </div>
         
-        <div class="grid grid-cols-4 gap-5 mb-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 mb-6">
             <div class="administrative-dashboard-card-module-component-block p-6 border-t-4 border-blue-400">
                 <p class="text-[11px] font-black uppercase mb-1 text-gray-500">Total Omzet</p>
-                <h3 class="text-2xl font-black text-gray-800" id="administrative-dashboard-metric-display-data-gross-omzet-revenue-amount-number">Rp 0</h3>
+                <h3 class="text-xl md:text-2xl font-black text-gray-800 break-words" id="administrative-dashboard-metric-display-data-gross-omzet-revenue-amount-number">Rp 0</h3>
             </div>
             
             <div class="administrative-dashboard-card-module-component-block p-6 border-t-4 border-red-500 relative group overflow-hidden">
                 <div class="absolute inset-0 bg-red-600/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-black cursor-pointer border border-white rounded-xl">LIHAT HPP</div>
                 <p class="text-[11px] font-black text-red-500 mb-1 uppercase">Total HPP</p>
-                <h3 class="text-2xl font-black text-gray-800" id="administrative-dashboard-metric-display-data-total-hpp-production-cost-number">Rp 0</h3>
+                <h3 class="text-xl md:text-2xl font-black text-gray-800 break-words" id="administrative-dashboard-metric-display-data-total-hpp-production-cost-number">Rp 0</h3>
             </div>
             
-            <div class="administrative-dashboard-card-module-component-block p-6 col-span-2 text-white flex justify-between items-center shadow-md border-none" style="background-color: var(--citykey-administrative-primary-color-hex-code-system);">
-                <div class="text-left">
-                    <p class="text-xs font-black text-white/80 mb-1 uppercase tracking-widest">Laba Bersih Operasional</p>
-                    <h3 class="text-4xl font-black" id="administrative-dashboard-metric-display-data-net-profit-margin-income-number">Rp 0</h3>
+            <div class="administrative-dashboard-card-module-component-block p-6 sm:col-span-2 text-white flex flex-col md:flex-row justify-between md:items-center gap-4 shadow-md border-none" style="background-color: var(--citykey-administrative-primary-color-hex-code-system);">
+                <div class="text-left w-full overflow-hidden">
+                    <p class="text-[10px] md:text-xs font-black text-white/80 mb-1 uppercase tracking-widest">Laba Bersih Operasional</p>
+                    <h3 class="text-3xl md:text-4xl font-black truncate" id="administrative-dashboard-metric-display-data-net-profit-margin-income-number">Rp 0</h3>
                 </div>
-                <div class="text-right">
-                    <p class="text-xs font-black text-white/80 mb-1 uppercase tracking-widest">Margin ROI</p>
+                <div class="text-left md:text-right shrink-0">
+                    <p class="text-[10px] md:text-xs font-black text-white/80 mb-1 uppercase tracking-widest">Margin ROI</p>
                     <span class="bg-white/20 px-4 py-1.5 rounded-xl text-lg font-black shadow-inner inline-block" id="administrative-dashboard-metric-display-data-roi-percentage-ratio-calculation-number">0%</span>
                 </div>
             </div>
         </div>
-        <div class="administrative-dashboard-card-module-component-block p-5 h-[300px] shadow-sm"><canvas id="administrative-canvas-financial-chart-rendering-context-board-display-ui"></canvas></div>
+        <div class="administrative-dashboard-card-module-component-block p-5 h-[250px] md:h-[300px] shadow-sm"><canvas id="administrative-canvas-financial-chart-rendering-context-board-display-ui"></canvas></div>
     </section>
 
     <section id="administrative-workspace-route-view-catalog-panel-container-layout" class="administrative-content-viewport-section-view-route" style="display: none;">
         <div class="flex justify-between items-center mb-6">
-            <div><h2 class="text-2xl font-black mb-1" style="color: var(--citykey-administrative-text-main-color-hex-code-system);">Gudang Produk 📦</h2><p class="text-xs font-medium" style="color: var(--citykey-administrative-text-muted-color-hex-code-system);">Manajemen master produk, HPP, dan stok aktual.</p></div>
-            <button onclick="executeOpenProductEditorManagerOverlayModalFunctionTriggerSystemEngine(null)" class="administrative-global-action-button-primary-interactive-element text-sm shadow-sm">+ Tambah Produk Baru</button>
+            <div><h2 class="text-xl md:text-2xl font-black mb-1" style="color: var(--citykey-administrative-text-main-color-hex-code-system);">Gudang Produk 📦</h2><p class="text-xs font-medium" style="color: var(--citykey-administrative-text-muted-color-hex-code-system);">Manajemen master produk, HPP, dan stok.</p></div>
+            <button onclick="executeOpenProductEditorManagerOverlayModalFunctionTriggerSystemEngine(null)" class="administrative-global-action-button-primary-interactive-element text-sm shadow-sm">+ Produk Baru</button>
         </div>
         <div class="administrative-dashboard-card-module-component-block overflow-x-auto shadow-sm">
             <table class="w-full text-left text-xs min-w-[700px]">
@@ -263,29 +263,29 @@
     </section>
 
     <section id="administrative-workspace-route-view-orders-panel-container-layout" class="administrative-content-viewport-section-view-route" style="display: none;">
-        <h2 class="text-2xl font-black mb-6" style="color: var(--citykey-administrative-text-main-color-hex-code-system);">Pusat Ekspedisi 📑</h2>
+        <h2 class="text-xl md:text-2xl font-black mb-6" style="color: var(--citykey-administrative-text-main-color-hex-code-system);">Pusat Ekspedisi 📑</h2>
         
-        <div class="flex flex-wrap gap-2 mb-6 p-2 rounded-2xl w-fit border shadow-sm" style="background-color: var(--citykey-administrative-surface-container-color-hex-code-system); border-color: var(--citykey-administrative-border-outline-color-rgba-code-system);">
-            <button onclick="executeApplyOrderDatasetFiltrationStatusSortingLogicProcessorEngine('All', this)" class="administrative-button-filter-order-state-item-btn-ui administrative-global-action-button-primary-interactive-element !py-2 !px-4 !rounded-xl !text-xs uppercase tracking-widest shadow-sm">Semua</button>
-            <button onclick="executeApplyOrderDatasetFiltrationStatusSortingLogicProcessorEngine('Menunggu Verifikasi', this)" class="administrative-button-filter-order-state-item-btn-ui administrative-global-input-field-interactive-component-data !py-2 !px-4 !rounded-xl !text-xs !w-auto cursor-pointer font-bold !bg-transparent !border-transparent text-gray-500">Menunggu Verifikasi</button>
-            <button onclick="executeApplyOrderDatasetFiltrationStatusSortingLogicProcessorEngine('Dikemas', this)" class="administrative-button-filter-order-state-item-btn-ui administrative-global-input-field-interactive-component-data !py-2 !px-4 !rounded-xl !text-xs !w-auto cursor-pointer font-bold !bg-transparent !border-transparent text-gray-500">Dikemas</button>
-            <button onclick="executeApplyOrderDatasetFiltrationStatusSortingLogicProcessorEngine('Dikirim', this)" class="administrative-button-filter-order-state-item-btn-ui administrative-global-input-field-interactive-component-data !py-2 !px-4 !rounded-xl !text-xs !w-auto cursor-pointer font-bold !bg-transparent !border-transparent text-gray-500">Dikirim</button>
-            <button onclick="executeApplyOrderDatasetFiltrationStatusSortingLogicProcessorEngine('Selesai', this)" class="administrative-button-filter-order-state-item-btn-ui administrative-global-input-field-interactive-component-data !py-2 !px-4 !rounded-xl !text-xs !w-auto cursor-pointer font-bold !bg-transparent !border-transparent text-gray-500">Selesai</button>
-            <button onclick="executeApplyOrderDatasetFiltrationStatusSortingLogicProcessorEngine('Batal', this)" class="administrative-button-filter-order-state-item-btn-ui administrative-global-input-field-interactive-component-data !py-2 !px-4 !rounded-xl !text-xs !w-auto cursor-pointer font-bold text-red-500 !bg-transparent !border-transparent">Batal</button>
+        <div class="flex flex-wrap gap-2 mb-6 p-2 rounded-2xl w-full md:w-fit border shadow-sm" style="background-color: var(--citykey-administrative-surface-container-color-hex-code-system); border-color: var(--citykey-administrative-border-outline-color-rgba-code-system);">
+            <button onclick="executeApplyOrderDatasetFiltrationStatusSortingLogicProcessorEngine('All', this)" class="administrative-button-filter-order-state-item-btn-ui administrative-global-action-button-primary-interactive-element !py-2 !px-4 !rounded-xl !text-xs uppercase tracking-widest shadow-sm flex-1 md:flex-none text-center">Semua</button>
+            <button onclick="executeApplyOrderDatasetFiltrationStatusSortingLogicProcessorEngine('Menunggu Verifikasi', this)" class="administrative-button-filter-order-state-item-btn-ui administrative-global-input-field-interactive-component-data !py-2 !px-4 !rounded-xl !text-xs !w-auto cursor-pointer font-bold !bg-transparent !border-transparent text-gray-500 flex-1 md:flex-none text-center">Verifikasi</button>
+            <button onclick="executeApplyOrderDatasetFiltrationStatusSortingLogicProcessorEngine('Dikemas', this)" class="administrative-button-filter-order-state-item-btn-ui administrative-global-input-field-interactive-component-data !py-2 !px-4 !rounded-xl !text-xs !w-auto cursor-pointer font-bold !bg-transparent !border-transparent text-gray-500 flex-1 md:flex-none text-center">Dikemas</button>
+            <button onclick="executeApplyOrderDatasetFiltrationStatusSortingLogicProcessorEngine('Dikirim', this)" class="administrative-button-filter-order-state-item-btn-ui administrative-global-input-field-interactive-component-data !py-2 !px-4 !rounded-xl !text-xs !w-auto cursor-pointer font-bold !bg-transparent !border-transparent text-gray-500 flex-1 md:flex-none text-center">Dikirim</button>
+            <button onclick="executeApplyOrderDatasetFiltrationStatusSortingLogicProcessorEngine('Selesai', this)" class="administrative-button-filter-order-state-item-btn-ui administrative-global-input-field-interactive-component-data !py-2 !px-4 !rounded-xl !text-xs !w-auto cursor-pointer font-bold !bg-transparent !border-transparent text-gray-500 flex-1 md:flex-none text-center">Selesai</button>
+            <button onclick="executeApplyOrderDatasetFiltrationStatusSortingLogicProcessorEngine('Batal', this)" class="administrative-button-filter-order-state-item-btn-ui administrative-global-input-field-interactive-component-data !py-2 !px-4 !rounded-xl !text-xs !w-auto cursor-pointer font-bold text-red-500 !bg-transparent !border-transparent flex-1 md:flex-none text-center">Batal</button>
         </div>
         <div id="administrative-container-admin-order-expedition-list-data-rendering-box-layout-ui" class="space-y-4"></div>
     </section>
 
     <section id="administrative-workspace-route-view-vouchers-panel-container-layout" class="administrative-content-viewport-section-view-route" style="display: none;">
         <div class="flex justify-between items-center mb-6">
-            <div><h2 class="text-2xl font-black mb-1" style="color: var(--citykey-administrative-text-main-color-hex-code-system);">Kupon Diskon 🎟️</h2><p class="text-xs font-medium" style="color: var(--citykey-administrative-text-muted-color-hex-code-system);">Buat kode promo untuk pelanggan.</p></div>
-            <button onclick="executeModalOpenActionSystemFrameworkInterfaceDirectForceCommand('administrative-modal-create-voucher-engine-overlay-container-box-modal-screen-ui')" class="administrative-global-action-button-primary-interactive-element text-sm shadow-sm">+ Buat Kupon Baru</button>
+            <div><h2 class="text-xl md:text-2xl font-black mb-1" style="color: var(--citykey-administrative-text-main-color-hex-code-system);">Kupon Diskon 🎟️</h2><p class="text-xs font-medium" style="color: var(--citykey-administrative-text-muted-color-hex-code-system);">Buat kode promo.</p></div>
+            <button onclick="executeModalOpenActionSystemFrameworkInterfaceDirectForceCommand('administrative-modal-create-voucher-engine-overlay-container-box-modal-screen-ui')" class="administrative-global-action-button-primary-interactive-element text-sm shadow-sm">+ Buat Kupon</button>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="administrative-container-voucher-display-grid-data-cards-layout-mapping-ui"></div>
     </section>
 
     <section id="administrative-workspace-route-view-ledger-panel-container-layout" class="administrative-content-viewport-section-view-route" style="display: none;">
-        <h2 class="text-2xl font-black mb-6" style="color: var(--citykey-administrative-text-main-color-hex-code-system);">Jurnal Akuntansi 📒</h2>
+        <h2 class="text-xl md:text-2xl font-black mb-6" style="color: var(--citykey-administrative-text-main-color-hex-code-system);">Jurnal Akuntansi 📒</h2>
         <div class="administrative-dashboard-card-module-component-block overflow-x-auto shadow-sm">
             <table class="w-full text-left text-xs min-w-[600px]">
                 <thead class="uppercase font-black tracking-widest border-b" style="background-color: var(--citykey-administrative-background-base-color-hex-code-system); color: var(--citykey-administrative-text-muted-color-hex-code-system); border-color: var(--citykey-administrative-border-outline-color-rgba-code-system);">
@@ -297,21 +297,21 @@
     </section>
 
     <section id="administrative-workspace-route-view-users-panel-container-layout" class="administrative-content-viewport-section-view-route" style="display: none;">
-        <h2 class="text-2xl font-black mb-6" style="color: var(--citykey-administrative-text-main-color-hex-code-system);">Database Member 👥</h2>
+        <h2 class="text-xl md:text-2xl font-black mb-6" style="color: var(--citykey-administrative-text-main-color-hex-code-system);">Database Member 👥</h2>
         <div id="administrative-container-user-crm-grid-data-profiles-cards-collection-ui" class="grid grid-cols-1 md:grid-cols-2 gap-5"></div>
     </section>
 
     <section id="administrative-workspace-route-view-logs-panel-container-layout" class="administrative-content-viewport-section-view-route" style="display: none;">
         <div class="flex justify-between items-center mb-6">
-            <h2 class="text-2xl font-black" style="color: var(--citykey-administrative-text-main-color-hex-code-system);">Log Akses Keamanan 🛡️</h2>
-            <button onclick="executeClearAllSecurityLogsDatabaseProcessActionAlgorithmFunction()" class="administrative-global-action-button-primary-interactive-element !bg-red-500 hover:!bg-red-600 text-xs shadow-sm">🗑️ Bersihkan Log</button>
+            <h2 class="text-xl md:text-2xl font-black" style="color: var(--citykey-administrative-text-main-color-hex-code-system);">Log Akses Keamanan 🛡️</h2>
+            <button onclick="executeClearAllSecurityLogsDatabaseProcessActionAlgorithmFunction()" class="administrative-global-action-button-primary-interactive-element !bg-red-500 hover:!bg-red-600 text-xs shadow-sm">🗑️ Bersihkan</button>
         </div>
         <div class="administrative-dashboard-card-module-component-block p-6"><div class="relative border-l-2 ml-2 space-y-5" id="administrative-container-security-log-tracker-data-history-list-record-ui" style="border-color:var(--citykey-administrative-border-outline-color-rgba-code-system);"></div></div>
     </section>
 
     <section id="administrative-workspace-route-view-settings-panel-container-layout" class="administrative-content-viewport-section-view-route max-w-4xl" style="display: none;">
-        <h2 class="text-2xl font-black mb-6" style="color: var(--citykey-administrative-text-main-color-hex-code-system);">Konfigurasi Toko ⚙️</h2>
-        <div class="grid grid-cols-2 gap-6 mb-6">
+        <h2 class="text-xl md:text-2xl font-black mb-6" style="color: var(--citykey-administrative-text-main-color-hex-code-system);">Konfigurasi Toko ⚙️</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             
             <div class="administrative-dashboard-card-module-component-block p-6 border-t-4" style="border-top-color: var(--citykey-administrative-primary-color-hex-code-system);">
                 <h3 class="font-bold text-sm mb-4" style="color: var(--citykey-administrative-primary-color-hex-code-system);">Tampilan & Tema</h3>
@@ -390,9 +390,9 @@
                 </div>
             </div>
 
-            <div class="administrative-dashboard-card-module-component-block p-6 border-t-4 border-blue-400 col-span-2 space-y-4">
+            <div class="administrative-dashboard-card-module-component-block p-6 border-t-4 border-blue-400 md:col-span-2 space-y-4">
                 <h3 class="font-bold text-sm mb-2 text-blue-500">Metode Pembayaran & Ekspedisi</h3>
-                <div class="grid grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="text-xs font-bold uppercase block mb-2">Daftar Rekening Bank / E-Wallet</label>
                         <p class="text-[10px] text-gray-400 mb-2">Format: BANK | NO_REK | NAMA</p>
@@ -425,35 +425,35 @@
 
 <div id="administrative-print-thermal-receipt-area-target-render" class="hidden print-only p-4"></div>
 
-<div id="administrative-modal-product-editor-engine-overlay-container-box-modal-screen-ui" class="administrative-modal-overlay-background-protection-layer-display-none no-print-zone-exclusion-class" onclick="executeHandleModalOverlayOutsideClickEventSequenceActionScriptValidationLogic(event, 'administrative-modal-product-editor-engine-overlay-container-box-modal-screen-ui')">
-    <div class="administrative-modal-content-container-box-wrapper-architecture shadow-2xl">
-        <h3 class="text-2xl font-black mb-6" style="color:var(--citykey-administrative-primary-color-hex-code-system);" id="administrative-label-modal-product-form-title-text-display-heading-label-ui-component">Tambah Produk</h3>
+<div id="administrative-modal-product-editor-engine-overlay-container-box-modal-screen-ui" class="administrative-modal-overlay-background-protection-layer-display-none no-print-zone-exclusion-class p-4" onclick="executeHandleModalOverlayOutsideClickEventSequenceActionScriptValidationLogic(event, 'administrative-modal-product-editor-engine-overlay-container-box-modal-screen-ui')">
+    <div class="administrative-modal-content-container-box-wrapper-architecture shadow-2xl w-full">
+        <h3 class="text-xl md:text-2xl font-black mb-6" style="color:var(--citykey-administrative-primary-color-hex-code-system);" id="administrative-label-modal-product-form-title-text-display-heading-label-ui-component">Tambah Produk</h3>
         <input type="hidden" id="administrative-tracker-hidden-product-id-database-key-value-input-tracker-identifier-ui">
         
-        <div class="grid grid-cols-2 gap-4">
-            <div class="col-span-2">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="md:col-span-2">
                 <label class="text-xs font-bold uppercase text-gray-500 mb-1 block">Nama Produk</label>
                 <input type="text" id="administrative-input-field-product-name-title-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data">
             </div>
             
-            <div class="col-span-2 p-4 rounded-2xl border border-dashed border-red-200 bg-red-50/40 my-2">
+            <div class="md:col-span-2 p-4 rounded-2xl border border-dashed border-red-200 bg-red-50/40 my-2">
                 <h4 class="text-xs font-black text-red-500 mb-3 uppercase tracking-widest">Kalkulator HPP & Laba</h4>
-                <div class="grid grid-cols-3 gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     <div>
                         <label class="text-[10px] font-bold text-red-600 uppercase mb-1 block">Modal HPP (Rahasia)</label>
                         <div class="relative">
                             <span class="absolute left-3 top-1/2 -translate-y-1/2 font-black text-red-400 text-xs">Rp</span>
-                            <input type="number" id="administrative-input-field-product-hpp-cost-value-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data pl-8 bg-white border-red-200 text-red-600 font-mono text-sm shadow-sm !py-2" onkeyup="executeCalculateLiveProductItemMarginProfitEngineCalculatorComputationAlgorithmLogic()">
+                            <input type="number" id="administrative-input-field-product-hpp-cost-value-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data pl-8 bg-white border-red-200 text-red-600 font-mono text-sm shadow-sm !py-2 w-full" onkeyup="executeCalculateLiveProductItemMarginProfitEngineCalculatorComputationAlgorithmLogic()">
                         </div>
                     </div>
                     <div>
                         <label class="text-[10px] font-bold uppercase mb-1 block" style="color: var(--citykey-administrative-primary-color-hex-code-system);">Harga Jual Publik</label>
                         <div class="relative">
                             <span class="absolute left-3 top-1/2 -translate-y-1/2 font-black opacity-50 text-xs">Rp</span>
-                            <input type="number" id="administrative-input-field-product-jual-retail-value-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data pl-8 bg-white font-mono font-black text-sm shadow-sm !py-2" style="border-color:var(--citykey-administrative-primary-color-hex-code-system); color:var(--citykey-administrative-primary-color-hex-code-system);" onkeyup="executeCalculateLiveProductItemMarginProfitEngineCalculatorComputationAlgorithmLogic()">
+                            <input type="number" id="administrative-input-field-product-jual-retail-value-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data pl-8 bg-white font-mono font-black text-sm shadow-sm !py-2 w-full" style="border-color:var(--citykey-administrative-primary-color-hex-code-system); color:var(--citykey-administrative-primary-color-hex-code-system);" onkeyup="executeCalculateLiveProductItemMarginProfitEngineCalculatorComputationAlgorithmLogic()">
                         </div>
                     </div>
-                    <div class="flex flex-col justify-center bg-white rounded-xl border border-gray-200 p-2 text-center">
+                    <div class="flex flex-col justify-center bg-white rounded-xl border border-gray-200 p-2 text-center w-full">
                         <label class="text-[10px] font-bold text-gray-500 uppercase mb-1 block">Laba Bersih / Pcs</label>
                         <span id="administrative-display-projected-profit-margin-item-data-text-display-rendering-output-ui" class="font-mono font-black text-base text-green-500">Rp 0</span>
                     </div>
@@ -462,66 +462,66 @@
 
             <div>
                 <label class="text-xs font-bold uppercase text-gray-500 mb-1 block">Stok Fisik</label>
-                <input type="number" id="administrative-input-field-product-stok-quantity-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data font-mono">
+                <input type="number" id="administrative-input-field-product-stok-quantity-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data font-mono w-full">
             </div>
             <div>
                 <label class="text-xs font-bold uppercase text-gray-500 mb-1 block">Bahan / Material</label>
-                <input type="text" id="administrative-input-field-product-bahan-material-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data">
+                <input type="text" id="administrative-input-field-product-bahan-material-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data w-full">
             </div>
-            <div class="col-span-2">
+            <div class="md:col-span-2">
                 <label class="text-xs font-bold uppercase text-gray-500 mb-1 block">Opsi Varian (Pisahkan Koma)</label>
-                <input type="text" id="administrative-input-field-product-sizes-variants-array-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data" placeholder="Original, Custom Nama">
+                <input type="text" id="administrative-input-field-product-sizes-variants-array-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data w-full" placeholder="Original, Custom Nama">
             </div>
             
-            <div class="col-span-2">
+            <div class="md:col-span-2">
                 <label class="text-xs font-bold uppercase text-gray-500 mb-2 block">Upload Multi-Foto Produk</label>
                 <div class="flex flex-col gap-3">
-                    <input type="file" id="administrative-input-field-product-image-file-upload-multi-data-input-file-form-ui" accept="image/*" multiple class="administrative-global-input-field-interactive-component-data !p-2 bg-white cursor-pointer text-xs" onchange="executeProcessMultipleProductImageFileUploadToDatabaseBase64ArrayStorageLogicArchitectureRoutineExecution(event)">
+                    <input type="file" id="administrative-input-field-product-image-file-upload-multi-data-input-file-form-ui" accept="image/*" multiple class="administrative-global-input-field-interactive-component-data !p-2 bg-white cursor-pointer text-xs w-full" onchange="executeProcessMultipleProductImageFileUploadToDatabaseBase64ArrayStorageLogicArchitectureRoutineExecution(event)">
                     
-                    <div id="administrative-container-product-image-previews-display-grid-box-wrapper-ui-component" class="flex gap-3 overflow-x-auto py-2"></div>
+                    <div id="administrative-container-product-image-previews-display-grid-box-wrapper-ui-component" class="flex gap-3 overflow-x-auto py-2 w-full"></div>
                     
                     <button type="button" onclick="executeClearAllSelectedProductImagesCacheMemoryArrayBufferDataStorageMechanism()" class="text-xs font-bold text-red-500 underline w-fit">Hapus Pilihan Foto</button>
                 </div>
             </div>
 
-            <div class="col-span-2">
+            <div class="md:col-span-2">
                 <label class="text-xs font-bold uppercase text-gray-500 mb-1 block">Deskripsi Penjualan</label>
-                <textarea id="administrative-input-field-product-description-marketing-text-data-input-field-component-box-ui" class="administrative-global-input-field-interactive-component-data h-24 resize-none text-sm"></textarea>
+                <textarea id="administrative-input-field-product-description-marketing-text-data-input-field-component-box-ui" class="administrative-global-input-field-interactive-component-data h-24 resize-none text-sm w-full"></textarea>
             </div>
         </div>
-        <div class="flex gap-4 mt-6">
-            <button onclick="executeModalCloseActionSystemFrameworkInterfaceDirectForceCommand('administrative-modal-product-editor-engine-overlay-container-box-modal-screen-ui')" class="flex-1 administrative-global-action-button-secondary-interactive-element py-3 uppercase">Batal</button>
-            <button onclick="executeSaveProductDataCommitToMasterDatabaseEngineProcessorScriptValidationAlgorithmRoutine()" class="flex-[2] administrative-global-action-button-primary-interactive-element py-3 uppercase">Simpan Produk Ke Gudang</button>
+        <div class="flex flex-col sm:flex-row gap-4 mt-6">
+            <button onclick="executeModalCloseActionSystemFrameworkInterfaceDirectForceCommand('administrative-modal-product-editor-engine-overlay-container-box-modal-screen-ui')" class="w-full sm:flex-1 administrative-global-action-button-secondary-interactive-element py-3 uppercase">Batal</button>
+            <button onclick="executeSaveProductDataCommitToMasterDatabaseEngineProcessorScriptValidationAlgorithmRoutine()" class="w-full sm:flex-[2] administrative-global-action-button-primary-interactive-element py-3 uppercase">Simpan Produk Ke Gudang</button>
         </div>
     </div>
 </div>
 
-<div id="administrative-modal-create-voucher-engine-overlay-container-box-modal-screen-ui" class="administrative-modal-overlay-background-protection-layer-display-none no-print-zone-exclusion-class" onclick="executeHandleModalOverlayOutsideClickEventSequenceActionScriptValidationLogic(event, 'administrative-modal-create-voucher-engine-overlay-container-box-modal-screen-ui')">
-    <div class="administrative-modal-content-container-box-wrapper-architecture !max-w-md shadow-2xl">
-        <h3 class="text-2xl font-black mb-5" style="color: var(--citykey-administrative-primary-color-hex-code-system);">Buat Kupon Promo 🎟️</h3>
+<div id="administrative-modal-create-voucher-engine-overlay-container-box-modal-screen-ui" class="administrative-modal-overlay-background-protection-layer-display-none no-print-zone-exclusion-class p-4" onclick="executeHandleModalOverlayOutsideClickEventSequenceActionScriptValidationLogic(event, 'administrative-modal-create-voucher-engine-overlay-container-box-modal-screen-ui')">
+    <div class="administrative-modal-content-container-box-wrapper-architecture !max-w-md shadow-2xl w-full">
+        <h3 class="text-xl md:text-2xl font-black mb-5" style="color: var(--citykey-administrative-primary-color-hex-code-system);">Buat Kupon Promo 🎟️</h3>
         <div class="space-y-4 mb-6">
             <div>
                 <label class="text-xs font-bold uppercase text-gray-500 mb-1 block">Kode Unik (Tanpa Spasi)</label>
-                <input type="text" id="administrative-input-voucher-engine-code-string-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data uppercase font-black tracking-widest text-center" placeholder="DISKON10">
+                <input type="text" id="administrative-input-voucher-engine-code-string-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data uppercase font-black tracking-widest text-center w-full" placeholder="DISKON10">
             </div>
             <div>
                 <label class="text-xs font-bold uppercase text-gray-500 mb-1 block">Potongan Rp</label>
-                <input type="number" id="administrative-input-voucher-engine-value-amount-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data text-center font-mono" placeholder="10000">
+                <input type="number" id="administrative-input-voucher-engine-value-amount-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data text-center font-mono w-full" placeholder="10000">
             </div>
-            <div class="flex gap-4">
-                <div class="w-1/2">
+            <div class="flex flex-col sm:flex-row gap-4">
+                <div class="w-full sm:w-1/2">
                     <label class="text-xs font-bold uppercase text-gray-500 mb-1 block">Kuota Pemakaian</label>
-                    <input type="number" id="administrative-input-voucher-engine-quota-limit-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data font-mono" placeholder="100">
+                    <input type="number" id="administrative-input-voucher-engine-quota-limit-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data font-mono w-full" placeholder="100">
                 </div>
-                <div class="w-1/2">
+                <div class="w-full sm:w-1/2">
                     <label class="text-xs font-bold uppercase text-gray-500 mb-1 block">Tgl Expired</label>
-                    <input type="date" id="administrative-input-voucher-engine-expiration-date-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data cursor-pointer">
+                    <input type="date" id="administrative-input-voucher-engine-expiration-date-data-input-field-component-ui" class="administrative-global-input-field-interactive-component-data cursor-pointer w-full">
                 </div>
             </div>
         </div>
-        <div class="flex gap-4">
-            <button onclick="executeModalCloseActionSystemFrameworkInterfaceDirectForceCommand('administrative-modal-create-voucher-engine-overlay-container-box-modal-screen-ui')" class="flex-1 administrative-global-action-button-secondary-interactive-element py-3 uppercase">Batal</button>
-            <button onclick="executeGeneratePublishPromoVoucherActionEngineProcessorScriptRoutineAlgorithmLogic()" class="flex-[2] administrative-global-action-button-primary-interactive-element py-3 uppercase">Publish Kupon</button>
+        <div class="flex flex-col sm:flex-row gap-4">
+            <button onclick="executeModalCloseActionSystemFrameworkInterfaceDirectForceCommand('administrative-modal-create-voucher-engine-overlay-container-box-modal-screen-ui')" class="w-full sm:flex-1 administrative-global-action-button-secondary-interactive-element py-3 uppercase">Batal</button>
+            <button onclick="executeGeneratePublishPromoVoucherActionEngineProcessorScriptRoutineAlgorithmLogic()" class="w-full sm:flex-[2] administrative-global-action-button-primary-interactive-element py-3 uppercase">Publish Kupon</button>
         </div>
     </div>
 </div>
@@ -549,7 +549,7 @@
         }, 
         ow: { nm: 'CEO CityKey Admin', av: 'https://api.dicebear.com/7.x/notionists/svg?seed=CEO', pn: 'admin123' }, 
         products: [
-            {
+             {
                 id: 1710000000001,
                 nm: 'citykey.id - Tabebuya Bloom',
                 hp: 1100, jl: 15000, st: 5, bh: 'Akrilik Tebal 3mm',
@@ -595,7 +595,7 @@
                 hp: 11000, jl: 15000, st: 5, bh: 'Akrilik Tebal 3mm',
                 ds: 'Ganci premium edisi Gedung Sate, suvenir khas Kota Kembang yang elegan.',
                 sz: ['Original'],
-                im: ['https://placehold.co/150x150/F2BB66/ffffff?text=BDG+Depan', 'https://placehold.co/150x150/F2BB66/ffffff?text=BDG+Belakang', 'https://placehold.co/150x150/F2BB66/ffffff?text=BDG+Detail']
+                im: ['https://placehold.co/150x150/F2BB66/ffffff?text=BDG+Depan']
             }
         ], 
         or: [], us: [], vc: [], ld: [], lg: [] 
@@ -760,14 +760,12 @@
     }
 
     function executeSaveMasterEnterpriseDatabaseToLocalStorageMemoryBankDatabaseSystemLogic() { 
-    try {
-        localStorage.setItem(SYSTEM_MASTER_DATABASE_IDENTIFICATION_CONNECTION_SYNCHRONIZATION_KEY_LOCAL_STORAGE_BRIDGE_STRING, JSON.stringify(globalCityKeyEnterpriseMasterDatabaseInformationSystemObjectTrackerArchitectureEngineFramework)); 
-    } catch (error) {
-        alert("🚨 GAGAL MENYIMPAN: Ukuran foto produk terlalu besar! Memori browser penuh. Tolong perkecil/kompres foto sebelum di-upload ya.");
-        console.error("LocalStorage Limit Exceeded:", error);
-    }
-}
-        localStorage.setItem(SYSTEM_MASTER_DATABASE_IDENTIFICATION_CONNECTION_SYNCHRONIZATION_KEY_LOCAL_STORAGE_BRIDGE_STRING, JSON.stringify(globalCityKeyEnterpriseMasterDatabaseInformationSystemObjectTrackerArchitectureEngineFramework)); 
+        try {
+            localStorage.setItem(SYSTEM_MASTER_DATABASE_IDENTIFICATION_CONNECTION_SYNCHRONIZATION_KEY_LOCAL_STORAGE_BRIDGE_STRING, JSON.stringify(globalCityKeyEnterpriseMasterDatabaseInformationSystemObjectTrackerArchitectureEngineFramework)); 
+        } catch (error) {
+            alert("🚨 GAGAL MENYIMPAN: Ukuran foto produk terlalu besar! Memori browser penuh. Tolong perkecil/kompres foto sebelum di-upload ya.");
+            console.error("LocalStorage Limit Exceeded:", error);
+        }
     }
     
     function executeWriteAccountingAuditLedgerRecordEntryLogBookTransactionSystemArchitecture(transactionDescriptionTextStringLogDataEntryDescLog, transactionDebitAmountValueNumDataCurrencyValueAmount, transactionCreditAmountValueNumDataCurrencyValueAmount) { 
@@ -805,7 +803,7 @@
         rootDocumentElementNodeObjectReferenceContextDOMNodeHTML.style.setProperty('--citykey-administrative-global-font-family-system-architecture', `'${runtimeActiveThemeConfigurationStateObjectMapSettingApplicationMode.fn}', sans-serif`); 
         
         const activeLightingModeStringValueCurrentStateAppModeConfig = runtimeActiveThemeConfigurationStateObjectMapSettingApplicationMode.md;
-        document.body.className = `flex w-full h-screen relative ${activeLightingModeStringValueCurrentStateAppModeConfig === 'dark' ? 'system-application-theme-dark-mode-enabled-configuration-active' : activeLightingModeStringValueCurrentStateAppModeConfig === 'eyecare' ? 'system-application-theme-eyecare-mode-enabled-configuration-active' : ''}`; 
+        document.body.className = `flex w-full h-screen relative overflow-hidden text-[13px] md:text-sm ${activeLightingModeStringValueCurrentStateAppModeConfig === 'dark' ? 'system-application-theme-dark-mode-enabled-configuration-active' : activeLightingModeStringValueCurrentStateAppModeConfig === 'eyecare' ? 'system-application-theme-eyecare-mode-enabled-configuration-active' : ''}`; 
     }
     
     function executeGlobalSystemThemeChangeColorInjectionStateConfigSetting(hexColorCodeStringValueCodeInputDataValueHex, ringElementNodeObjectTriggerContextClickEventNode) { 
@@ -1122,7 +1120,7 @@
             globalCityKeyEnterpriseMasterDatabaseInformationSystemObjectTrackerArchitectureEngineFramework.products = globalCityKeyEnterpriseMasterDatabaseInformationSystemObjectTrackerArchitectureEngineFramework.products.filter(xFilterExecutionIndexKeySearchTargetModelMappingLogicElementComponentMap => xFilterExecutionIndexKeySearchTargetModelMappingLogicElementComponentMap.id !== productIdNumericalValueKeyIdentityCodeNumericValueId); 
             executeSaveMasterEnterpriseDatabaseToLocalStorageMemoryBankDatabaseSystemLogic(); 
             executeRenderCatalogInventoryDataGridTableInterfaceDisplayUIFrameworkUI(); 
-            executeTriggerAdministratorSystemToastNotificationPopUpAlertProtocolCommand("Produk dihapus.");
+            executeTriggerAdministratorSystemToastNotificationPopUpAlertProtocolCommand("Produk dihapus."); 
         } 
     }
 
@@ -1132,7 +1130,7 @@
             buttonIterationNodeLoopCycleStepObjectBtn.classList.remove('administrative-global-action-button-primary-interactive-element', 'shadow-sm', 'text-white'); 
             buttonIterationNodeLoopCycleStepObjectBtn.classList.add('administrative-global-input-field-interactive-component-data', 'text-gray-500'); 
             buttonIterationNodeLoopCycleStepObjectBtn.style.background = 'transparent'; 
-            buttonIterationNodeLoopCycleStepObjectBtn.style.borderColor = 'transparent';
+            buttonIterationNodeLoopCycleStepObjectBtn.style.borderColor = 'transparent'; 
         }); 
         
         buttonElementNodeObjectComponentTargetNodeButtonElementBtn.classList.remove('administrative-global-input-field-interactive-component-data', 'text-gray-500', 'text-red-500'); 
@@ -1147,7 +1145,7 @@
         const containerWrapperNodeElementDisplaySectionContainerBoxModuleLayoutUI = executeDocumentObjectInterfaceQuerySelectionByUniqueIdStringDataElement('administrative-container-admin-order-expedition-list-data-rendering-box-layout-ui'); 
         const currentlyFilteredDatasetArrayObjectStreamDataListRecordCollectionArr = currentActiveOrderDataFilterStringStateTrackerValueParameterSelection === 'All' ? globalCityKeyEnterpriseMasterDatabaseInformationSystemObjectTrackerArchitectureEngineFramework.or : globalCityKeyEnterpriseMasterDatabaseInformationSystemObjectTrackerArchitectureEngineFramework.or.filter(orderCond => orderCond.st === currentActiveOrderDataFilterStringStateTrackerValueParameterSelection); 
         
-        if(currentlyFilteredDatasetArrayObjectStreamDataListRecordCollectionArr.length === 0) return containerWrapperNodeElementDisplaySectionContainerBoxModuleLayoutUI.innerHTML = '<div class="p-12 text-center font-bold text-xs border border-dashed rounded-[16px] text-gray-400">Tidak ada transaksi ditemukan.</div>';
+        if(currentlyFilteredDatasetArrayObjectStreamDataListRecordCollectionArr.length === 0) return containerWrapperNodeElementDisplaySectionContainerBoxModuleLayoutUI.innerHTML = '<div class="p-12 text-center font-bold text-xs border border-dashed rounded-[16px] text-gray-400">Tidak ada transaksi ditemukan.</div>'; 
         
         containerWrapperNodeElementDisplaySectionContainerBoxModuleLayoutUI.innerHTML = currentlyFilteredDatasetArrayObjectStreamDataListRecordCollectionArr.reverse().map(orderTransactionRecordDataNodeObjectStructureMappingDataSchemaRecord => { 
             const activeStatusBadgeColorHexCodeStringColorCodeThemeModelConfig = orderTransactionRecordDataNodeObjectStructureMappingDataSchemaRecord.st === 'Selesai' ? 'var(--citykey-administrative-primary-color-hex-code-system)' : (orderTransactionRecordDataNodeObjectStructureMappingDataSchemaRecord.st === 'Dikirim' ? '#3B82F6' : (orderTransactionRecordDataNodeObjectStructureMappingDataSchemaRecord.st === 'Batal' || orderTransactionRecordDataNodeObjectStructureMappingDataSchemaRecord.st === 'Expired' ? '#EF4444' : 'var(--citykey-administrative-accent-color-hex-code-system)')); 
@@ -1216,10 +1214,6 @@
                 targetedOrderReferenceObjectNodeRecordDatabaseEntryRowFieldDataLog.it.forEach(cartItemObjNodeElementListArrayGroupItemMatch => { 
                     const masterCatalogProdRefDataPointIndexMappingSearchTargetMatch = globalCityKeyEnterpriseMasterDatabaseInformationSystemObjectTrackerArchitectureEngineFramework.products.find(xFindIdentifierCheckIndexLogicMapItemSearchRule => xFindIdentifierCheckIndexLogicMapItemSearchRule.id === cartItemObjNodeElementListArrayGroupItemMatch.id); 
                     if(masterCatalogProdRefDataPointIndexMappingSearchTargetMatch) masterCatalogProdRefDataPointIndexMappingSearchTargetMatch.st += cartItemObjNodeElementListArrayGroupItemMatch.qty; 
-
-// dan
-
-if(masterCatalogProdRefDataPointIndexMappingSearchTargetMatch) masterCatalogProdRefDataPointIndexMappingSearchTargetMatch.st -= cartItemObjNodeElementListArrayGroupItemMatch.qty;+= cartItemObjNodeElementListArrayGroupItemMatch.qty; 
                 }); 
                 executeTriggerAdministratorSystemToastNotificationPopUpAlertProtocolCommand("Pesanan Batal: Stok Dikembalikan!"); 
             } 
@@ -1227,7 +1221,7 @@ if(masterCatalogProdRefDataPointIndexMappingSearchTargetMatch) masterCatalogProd
             if(statePreviousStatusStringValArchiveHistoryLogRecordStateVar === 'Batal' && newlySelectedStatusStringValueTextSelectionStatusDataLogRecordVal !== 'Batal') { 
                 targetedOrderReferenceObjectNodeRecordDatabaseEntryRowFieldDataLog.it.forEach(cartItemObjNodeElementListArrayGroupItemMatch => { 
                     const masterCatalogProdRefDataPointIndexMappingSearchTargetMatch = globalCityKeyEnterpriseMasterDatabaseInformationSystemObjectTrackerArchitectureEngineFramework.products.find(xFindIdentifierCheckIndexLogicMapItemSearchRule => xFindIdentifierCheckIndexLogicMapItemSearchRule.id === cartItemObjNodeElementListArrayGroupItemMatch.id); 
-                    if(masterCatalogProdRefDataPointIndexMappingSearchTargetMatch) masterCatalogProdRefDataPointIndexMappingSearchTargetMatch.stok -= cartItemObjNodeElementListArrayGroupItemMatch.qty; 
+                    if(masterCatalogProdRefDataPointIndexMappingSearchTargetMatch) masterCatalogProdRefDataPointIndexMappingSearchTargetMatch.st -= cartItemObjNodeElementListArrayGroupItemMatch.qty; 
                 }); 
                 executeTriggerAdministratorSystemToastNotificationPopUpAlertProtocolCommand("Dipulihkan: Stok Dipotong."); 
             } 
