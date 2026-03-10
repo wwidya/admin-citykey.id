@@ -563,7 +563,7 @@
                 hp: 11000, jl: 15000, st: 5, bh: 'Akrilik Tebal 3mm',
                 ds: 'Ganci premium edisi Tugu Jogja, bawa kenangan istimewa dari sudut kota Jogja.',
                 sz: ['Original'],
-                im: ['https://placehold.co/150x150/FFB7B2/ffffff?text=JGJ+Depan', 'https://placehold.co/150x150/FFB7B2/ffffff?text=JGJ+Belakang']
+                im: ['https://i.pinimg.com/1200x/9d/0a/c1/9d0ac16fecc3439afe8447474d7f4d0e.jpg']
             },
             {
                 id: 1710000000003,
@@ -571,7 +571,7 @@
                 hp: 1100, jl: 15000, st: 5, bh: 'Akrilik Tebal 3mm',
                 ds: 'Yogyakarta bukan sekadar titik koordinat di peta, melainkan sebuah ruang di mana waktu memilih untuk berjalan lebih lambat, membiarkan setiap sudutnya bernapas dalam balutan tradisi yang kental dan modernitas yang santun.',
                 sz: ['Original'],
-                im: ['https://placehold.co/150x150/C3B4D3/ffffff?text=SMG+Depan', 'https://placehold.co/150x150/C3B4D3/ffffff?text=SMG+Belakang', 'https://placehold.co/150x150/C3B4D3/ffffff?text=SMG+Detail']
+                im: ['https://i.pinimg.com/1200x/fd/2a/89/fd2a89f6df78e259a38eb32950d24b5f.jpg']
             },
             {
                 id: 1710000000004,
@@ -587,7 +587,7 @@
                 hp: 11000, jl: 15000, st: 5, bh: 'Akrilik Tebal 3mm',
                 ds: 'Pekalongan bukan sekadar titik di peta Jawa Tengah, ia adalah selembar kain yang ditenun oleh waktu, tradisi, dan deru mesin jahit di sepertiga malam.',
                 sz: ['Original'],
-                im: ['https://placehold.co/150x150/F2BB66/ffffff?text=BDG+Depan', 'https://placehold.co/150x150/F2BB66/ffffff?text=BDG+Belakang', 'https://placehold.co/150x150/F2BB66/ffffff?text=BDG+Detail']
+                im: ['https://i.pinimg.com/736x/0c/7e/9c/0c7e9cc1e43bb1f36376ac009316bbdd.jpg']
             },
             {
                 id: 1710000000006,
@@ -760,12 +760,14 @@
     }
 
     function executeSaveMasterEnterpriseDatabaseToLocalStorageMemoryBankDatabaseSystemLogic() { 
-        try {
-            localStorage.setItem(SYSTEM_MASTER_DATABASE_IDENTIFICATION_CONNECTION_SYNCHRONIZATION_KEY_LOCAL_STORAGE_BRIDGE_STRING, JSON.stringify(globalCityKeyEnterpriseMasterDatabaseInformationSystemObjectTrackerArchitectureEngineFramework)); 
-        } catch (error) {
-            alert("🚨 GAGAL MENYIMPAN: Ukuran foto produk terlalu besar! Memori browser penuh. Tolong perkecil/kompres foto sebelum di-upload ya.");
-            console.error("LocalStorage Limit Exceeded:", error);
-        }
+    try {
+        localStorage.setItem(SYSTEM_MASTER_DATABASE_IDENTIFICATION_CONNECTION_SYNCHRONIZATION_KEY_LOCAL_STORAGE_BRIDGE_STRING, JSON.stringify(globalCityKeyEnterpriseMasterDatabaseInformationSystemObjectTrackerArchitectureEngineFramework)); 
+    } catch (error) {
+        alert("🚨 GAGAL MENYIMPAN: Ukuran foto produk terlalu besar! Memori browser penuh. Tolong perkecil/kompres foto sebelum di-upload ya.");
+        console.error("LocalStorage Limit Exceeded:", error);
+    }
+}
+        localStorage.setItem(SYSTEM_MASTER_DATABASE_IDENTIFICATION_CONNECTION_SYNCHRONIZATION_KEY_LOCAL_STORAGE_BRIDGE_STRING, JSON.stringify(globalCityKeyEnterpriseMasterDatabaseInformationSystemObjectTrackerArchitectureEngineFramework)); 
     }
     
     function executeWriteAccountingAuditLedgerRecordEntryLogBookTransactionSystemArchitecture(transactionDescriptionTextStringLogDataEntryDescLog, transactionDebitAmountValueNumDataCurrencyValueAmount, transactionCreditAmountValueNumDataCurrencyValueAmount) { 
@@ -1214,6 +1216,10 @@
                 targetedOrderReferenceObjectNodeRecordDatabaseEntryRowFieldDataLog.it.forEach(cartItemObjNodeElementListArrayGroupItemMatch => { 
                     const masterCatalogProdRefDataPointIndexMappingSearchTargetMatch = globalCityKeyEnterpriseMasterDatabaseInformationSystemObjectTrackerArchitectureEngineFramework.products.find(xFindIdentifierCheckIndexLogicMapItemSearchRule => xFindIdentifierCheckIndexLogicMapItemSearchRule.id === cartItemObjNodeElementListArrayGroupItemMatch.id); 
                     if(masterCatalogProdRefDataPointIndexMappingSearchTargetMatch) masterCatalogProdRefDataPointIndexMappingSearchTargetMatch.st += cartItemObjNodeElementListArrayGroupItemMatch.qty; 
+
+// dan
+
+if(masterCatalogProdRefDataPointIndexMappingSearchTargetMatch) masterCatalogProdRefDataPointIndexMappingSearchTargetMatch.st -= cartItemObjNodeElementListArrayGroupItemMatch.qty;+= cartItemObjNodeElementListArrayGroupItemMatch.qty; 
                 }); 
                 executeTriggerAdministratorSystemToastNotificationPopUpAlertProtocolCommand("Pesanan Batal: Stok Dikembalikan!"); 
             } 
@@ -1221,7 +1227,7 @@
             if(statePreviousStatusStringValArchiveHistoryLogRecordStateVar === 'Batal' && newlySelectedStatusStringValueTextSelectionStatusDataLogRecordVal !== 'Batal') { 
                 targetedOrderReferenceObjectNodeRecordDatabaseEntryRowFieldDataLog.it.forEach(cartItemObjNodeElementListArrayGroupItemMatch => { 
                     const masterCatalogProdRefDataPointIndexMappingSearchTargetMatch = globalCityKeyEnterpriseMasterDatabaseInformationSystemObjectTrackerArchitectureEngineFramework.products.find(xFindIdentifierCheckIndexLogicMapItemSearchRule => xFindIdentifierCheckIndexLogicMapItemSearchRule.id === cartItemObjNodeElementListArrayGroupItemMatch.id); 
-                    if(masterCatalogProdRefDataPointIndexMappingSearchTargetMatch) masterCatalogProdRefDataPointIndexMappingSearchTargetMatch.st -= cartItemObjNodeElementListArrayGroupItemMatch.qty; 
+                    if(masterCatalogProdRefDataPointIndexMappingSearchTargetMatch) masterCatalogProdRefDataPointIndexMappingSearchTargetMatch.stok -= cartItemObjNodeElementListArrayGroupItemMatch.qty; 
                 }); 
                 executeTriggerAdministratorSystemToastNotificationPopUpAlertProtocolCommand("Dipulihkan: Stok Dipotong."); 
             } 
